@@ -1,10 +1,5 @@
 #!/bin/sh 
 #
-# Example init.d script with LSB support.
-#
-# Please read this init.d carefully and modify the sections to
-# adjust it to the program you want to run.
-#
 # Copyright (c) 2007 Javier Fernandez-Sanguino <jfs@debian.org>
 #
 # This is free software; you may redistribute it and/or modify
@@ -30,10 +25,8 @@
 # Should-Stop:       
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: <Enter a short description of the sortware>
-# Description:       <Enter a long description of the software>
-#                    <...>
-#                    <...>
+# Short-Description: SphinxSearch
+# Description:       free open-source SQL full-text search engine
 ### END INIT INFO
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
@@ -70,11 +63,11 @@ fi
 
 # Use this if you want the user to explicitly set 'RUN' in 
 # /etc/default/
-#if [ "x$RUN" != "xyes" ] ; then
-#    log_failure_msg "$NAME disabled, please adjust the configuration to your needs "
-#    log_failure_msg "and then set RUN to 'yes' in /etc/default/$NAME to enable it."
-#    exit 1
-#fi
+if [ "x$RUN" != "xyes" ] ; then
+    log_failure_msg "$NAME disabled, please adjust the configuration to your needs "
+    log_failure_msg "and then set RUN to 'yes' in /etc/default/$NAME to enable it."
+    exit 1
+fi
 
 # Check that the user exists (if we set a user)
 # Does the user exist?

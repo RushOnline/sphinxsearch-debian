@@ -1,0 +1,12 @@
+# Defaults for sphinx initscript
+# sourced by /etc/init.d/sphinx
+# installed at /etc/default/sphinx by the maintainer scripts
+
+# change this to RUN=1 when daemon is configured
+RUN=0
+
+# system user under which daemon run
+DAEMONUSER=sphinx
+
+# Additional options that are passed to the Daemon.
+DAEMON_OPTS=""
