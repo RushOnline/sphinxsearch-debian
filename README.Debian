@@ -1,6 +1,8 @@
-sphinx for Debian
------------------
+Sphinxsearch
+------------
 
-<possible notes regarding this package - if none, delete this file>
+searchd will start automatically however the default configuration does not supply
+any indexes. Therefore, searchd will not continue running. You have to edit
+/etc/sphinxsearch/sphinx.conf to get any meaningful mode of operation.
 
- -- Rush (Tonop) Online <rush.zlo@gmail.com>  Thu, 22 Jul 2010 09:26:56 +0400
+Documentation is available in /usr/share/doc/sphinxsearch.

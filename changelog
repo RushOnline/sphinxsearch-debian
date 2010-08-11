@@ -1,5 +1,9 @@
-sphinxsearch (1.10-beta-1~ppa1) unstable; urgency=low
+sphinxsearch (1.10-beta-1~lucid1) lucid; urgency=low
 
-  * New upstream version
+  * New upstream version (real-time indexes support and other improvements)
+  * Compiled with 64-bid IDs
+  * Compiled with UnixODBC
+  * Compiled with PostgreSQL
+  * Compiled with Stemmer library
 
  -- Rush (Tonop) Online <rush.zlo@gmail.com>  Thu, 22 Jul 2010 09:26:56 +0400

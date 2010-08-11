@@ -1,2 +1,4 @@
-usr/bin
-usr/sbin
+/etc/sphinxsearch
+/var/lib/sphinxsearch/
+/var/lib/sphinxsearch/data/
+/var/log/sphinxsearch/
