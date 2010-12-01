@@ -4,8 +4,7 @@ DH_VERBOSE=1
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
-include /usr/share/cdbs/1/rules/dpatch.mk
-include /usr/share/dpatch/dpatch.make
+#include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 
 DEB_CONFIGURE_EXTRA_FLAGS := \
 	--prefix=/usr \
@@ -19,9 +18,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--with-libstemmer \
 	--with-iconv \
 	--with-unixodbc
-#	CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"
 
-#common-install-prehook-indep:: common-install-prehook-indep-impl
 common-install-arch common-install-indep:: common-install-impl
 common-install-impl::
 	docbook-to-man debian/indexer.1.sgml > indexer.1

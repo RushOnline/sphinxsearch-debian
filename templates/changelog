@@ -1,4 +1,4 @@
-sphinxsearch (1.10-beta-1~hardy3) hardy; urgency=low
+sphinxsearch (1.10-beta-1~@VERSION@3) @VERSION@; urgency=low
 
   * New upstream version (real-time indexes support and other improvements)
   * Compiled with 64-bid IDs

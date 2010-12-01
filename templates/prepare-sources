@@ -1,0 +1,22 @@
+#!/bin/sh
+
+VERSIONS="hardy lucid maverick"
+
+[ -n "$1" ] && [ "$1" != "compile" ] && VERSIONS="$1"
+
+echo $VERSIONS xxx $1
+ARCH="amd64"
+VERSION_DEPENDS_DEFAULT="libmysqlclient16"
+VERSION_DEPENDS_HARDY="libmysqlclient15off"
+TEMPLATES="changelog control"
+
+for VERSION in $VERSIONS; do
+	VERSION_DEPENDS=$VERSION_DEPENDS_DEFAULT
+	[ "$VERSION" = "hardy" ] && VERSION_DEPENDS=$VERSION_DEPENDS_HARDY
+
+	for TEMPLATE in $TEMPLATES; do
+		sed -e "s|@VERSION@|$VERSION|g" -e "s|@VERSION_DEPENDS@|$VERSION_DEPENDS|g" debian/templates/$TEMPLATE > debian/$TEMPLATE
+	done
+	V=`grep ^sphinxsearch debian/changelog | head -n1 | cut -f2 -d' ' | tr -d '()'`
+	debuild && [ "$1" = "compile" ] && pbuilder-dist $VERSION $ARCH build ../sphinxsearch_${V}.dsc
+done

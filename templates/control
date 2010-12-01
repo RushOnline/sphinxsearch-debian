@@ -2,12 +2,12 @@ Source: sphinxsearch
 Section: misc
 Priority: optional
 Maintainer: Rush (Tonop) Online <rush.zlo@gmail.com>
-Build-Depends: cdbs, quilt, debhelper (>= 5), autotools-dev, libmysqlclient15-dev, libpq-dev, unixodbc-dev, dpatch, autoconf, libtool, automake, docbook-to-man
+Build-Depends: cdbs, debhelper (>= 5), autotools-dev, libmysqlclient15-dev, libpq-dev, unixodbc-dev, dpatch, autoconf, libtool, automake, docbook-to-man
 Standards-Version: 3.8.3
 
 Package: sphinxsearch
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libpq5, unixodbc, libmysqlclient15off
+Depends: ${shlibs:Depends}, ${misc:Depends}, libpq5, unixodbc, @VERSION_DEPENDS@
 Description: Fast standalone full-text SQL search engine
  Sphinx is a standalone full text search engine, meant to provide fast,
  size-efficient and relevant fulltext search functions to other applications. 

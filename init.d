@@ -31,10 +31,10 @@
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-DAEMON=/usr/sbin/sphinx # Introduce the server's location here
-NAME=#PACKAGE              # Introduce the short server's name here
-DESC=#PACKAGE              # Introduce a short description here
-LOGDIR=/var/log/sphinx  # Log directory to use
+DAEMON=/usr/bin/searchd       # Introduce the server's location here
+NAME=#PACKAGE                 # Introduce the short server's name here
+DESC=#PACKAGE                 # Introduce a short description here
+LOGDIR=/var/log/sphinxsearch  # Log directory to use
 
 PIDFILE=/var/run/$NAME.pid 
 
